@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #4a0808, #d33131a8);
+    padding: 20px;
+}
+
+section {
+    height: 100%;
+    width: 350px;
+    border-radius: 10px;
+    margin: auto;
+    overflow: hidden;
+    background: black;
+}
+
+#all-reels {
+    height: 100%;
+    width: 100%;
+}
+
+.reel {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+.reel img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
