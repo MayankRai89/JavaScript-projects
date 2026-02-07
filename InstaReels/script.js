@@ -90,9 +90,6 @@ const reels = [
 ];
 const container = document.querySelector(".all-reels");
 
-// =====================
-// RENDER REELS
-// =====================
 let html = "";
 
 reels.forEach((elem, index) => {
@@ -137,10 +134,6 @@ reels.forEach((elem, index) => {
 
 container.innerHTML = html;
 
-// =====================
-// USER INTERACTION FLAG
-// (Needed for sound)
-// =====================
 let userInteracted = false;
 document.addEventListener(
   "click",
@@ -150,11 +143,7 @@ document.addEventListener(
   { once: true },
 );
 
-// =====================
-// CLICK EVENTS
-// =====================
 container.addEventListener("click", function (e) {
-  // LIKE
   const loveBtn = e.target.closest(".love");
   if (loveBtn) {
     const index = loveBtn.dataset.index;
@@ -170,7 +159,6 @@ container.addEventListener("click", function (e) {
     countElem.textContent = reels[index].likeCount;
   }
 
-  // FOLLOW
   const followBtn = e.target.closest(".follow-btn");
   if (followBtn) {
     const index = followBtn.dataset.index;
@@ -178,7 +166,6 @@ container.addEventListener("click", function (e) {
     followBtn.textContent = reels[index].isFollowed ? "Following" : "Follow";
   }
 
-  // MANUAL MUTE
   const muteBtn = e.target.closest(".mute-btn");
   if (muteBtn) {
     const reel = muteBtn.closest(".reel");
@@ -191,7 +178,6 @@ container.addEventListener("click", function (e) {
   }
 });
 
-// =====================
 // AUTO PLAY ON SCROLL
 // =====================
 const videos = document.querySelectorAll(".main-img");
@@ -225,9 +211,6 @@ const observer = new IntersectionObserver(
 
 videos.forEach((video) => observer.observe(video));
 
-// =====================
-// START FIRST VIDEO
-// =====================
 if (videos[0]) {
   videos[0].play().catch(() => {});
 }
