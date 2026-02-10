@@ -23,7 +23,7 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-
+    margin-right: 30px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     backdrop-filter: blur(15px);
@@ -53,4 +53,37 @@ body {
     50% {
         opacity: 0.2;
     }
+}
+
+#weather {
+    margin-top: 20px;
+    text-align: center;
+    color: #00ffcc;
+    font-family: monospace;
+}
+
+#weather h3 {
+    font-size: 1.5rem;
+}
+
+#result-div {
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #00ffcc;
+    font-family: monospace;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.result-div-inner {
+    margin: 5px 0;
+}
+
+.result-div-inner img {
+    width: 80px;
 }
